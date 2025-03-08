@@ -1,0 +1,63 @@
+//constructor overlopading demo
+public class Cuboid1 {
+int l,b;
+Cuboid1(int p,int q)
+{
+	l=p;
+	b=q;
+}
+Cuboid1(float a,int b)
+{
+	l=(int)a;
+	this.b=b;
+}
+Cuboid1(){}
+void volume()
+{
+	System.out.println(l*b);
+}
+public static void main(String args[])
+{
+Cuboid1 obj=new Cuboid1(2,3);
+obj.volume();
+Cuboid1 obj1=new Cuboid1();
+obj1.volume();
+Cuboid1 obj2=new Cuboid1(2.1f,5);
+obj2.volume();
+}
+}
+-------------------------------------------------------------------------------
+2)Method overloading
+-------------------------------------------------------------------------------
+public class Cuboid1 {
+int l,b;
+void setValues(int p,int q)
+{
+	l=p;
+	b=q;
+}
+int setValues(float a,int b)
+{
+	l=(int)a;
+	this.b=b;
+	return (l*b);
+}
+void setValues(){}
+void volume()
+{
+	System.out.println(l*b);
+}
+public static void main(String args[])
+{
+Cuboid1 obj=new Cuboid1();
+obj.setValues(2,3);
+obj.volume();
+Cuboid1 obj1=new Cuboid1();
+obj1.setValues();
+obj1.volume();
+Cuboid1 obj2=new Cuboid1();
+System.out.println(obj2.setValues(4.1f,6));
+
+}
+}
+
